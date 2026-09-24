@@ -1,0 +1,27 @@
+.element {
+    background-color: #000000;
+    color: #ffffff;
+    border: #949494 solid 10px;
+    border-bottom-color: #4f4f4f;
+    border-right-color: #6c6c6c;
+    border-radius: 10px;
+}
+
+.list-group {
+    margin: 0px !important;
+}
+
+.list-group-item {
+    border: none !important;
+    border-bottom: #ffffff solid 3px !important;
+    border-radius: 0px !important;
+    background-color: #000000 !important;
+}
+
+.final-item {
+    border-bottom: none !important;
+}
+
+.score-panel {
+    width: max-content;
+}

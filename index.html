@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <title>Tetris</title>
+        <style>
+            canvas {
+            display: block;
+            margin: 0 auto;
+            background: #eeeeee;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-6">
+                    <canvas class="element" id="gameCanvas" width="320" height="640"></canvas>
+                </div>
+                <div class="col-sm-3">
+                    <div class="score-panel">
+                        <canvas class="element" id="nextCanvas" width="128" height="64"></canvas>
+                        <br>
+                        <div class="card element" style="width: 100%;">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Level<span class="badge" id="level"></span></li>
+                                <li class="list-group-item">Score<span class="badge" id="score"></span></li>
+                                <li class="list-group-item final-item">Lines<span class="badge" id="lines"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="game.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
