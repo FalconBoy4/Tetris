@@ -135,7 +135,7 @@ class Block {
             "y": 0,
             "x": 0
         };
-        this.speed = level
+        this.speed = level + 1
     }
 
     move(x = 0, y = 0) {
