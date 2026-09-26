@@ -470,7 +470,7 @@ function update(dt) {
         piece.update(dt)
         cleared = grid.check()
         lines += cleared
-        score += calc_score(cleared)
+        current_score += calc_score(cleared)
         if (lines >= 10 * level) level += 1;
         if (piece.dead) {
             new_piece();
