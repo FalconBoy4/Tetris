@@ -143,6 +143,30 @@ class Grid {
         });
     }
 
+    draw_shape(shape, x, y) {
+        
+    }
+
+    draw_square_fill(ctx, x, y, colour_index) {
+        ctx.globalCompositeOperation = 'source-over';
+        x *= tile_size
+        y *= tile_size
+        ctx.drawImage(img, x, y)
+        ctx.fillStyle = colours[colour_index];
+        ctx.globalCompositeOperation = 'multiply';
+        ctx.fillRect(x, y, tile_size, tile_size)
+    }
+
+    draw_square_outline(ctx, x, y, colour_index) {
+        ctx.globalCompositeOperation = 'source-over';
+        thickness = Math.floor(tile_size / 16)
+        x = x * tile_size + thickness
+        y = y * tile_size + thickness
+        size = tile_size - thickness * 2
+        ctx.strokeStyle = colours[colour_index];
+        ctx.strokeRect(x, y, size, size)
+    }
+
     get is_clear() {
         return Math.max(...this.matrix) === 0;
     }
